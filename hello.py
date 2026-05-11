@@ -27,5 +27,12 @@ print('min number-', min(arrNum)) # min returns the minimum element in the list,
 # tuple in python is a collection of items which are ordered and unchangeable. It allows duplicate members.
 tuple1 = (1, 2, 3, 4, 5)
 print(tuple1)
-tuple1[1]=10 # this will give an error because tuples are immutable, meaning they cannot be changed after they are created.
-print(tuple1)
+# tuple1[1]=10 # this will give an error because tuples are immutable, meaning they cannot be changed after they are created.
+# print(tuple1)
+
+# tuple is immutable, faster speed than list, and can be used as keys in a dictionary, while list cannot be used as keys in a dictionary because they are mutable.
+
+# set is used by {}
+set1 = {1, 2, 3, 4, 5}
+print(set1) #set doesn't support indexing, slicing, or other sequence-like behavior. It is an unordered collection of unique elements. It does not allow duplicate members.
+set1.add(6) # add adds an element to the set
