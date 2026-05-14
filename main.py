@@ -17,5 +17,14 @@ products = [
 def get_all_products():
     return products
 
-# {"message": "Hello, World!"}
+@app.get("/product/{id}")
+def get_product_by_id(id: int):
+    for product in products:
+        if product.id == id:
+            return product
+    return {"message": "Product not found"}
 
+@app.post("/product")
+def create_product(product: Product):
+    products.append(product)
+    return {"message": "Product created successfully"}
